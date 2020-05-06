@@ -6,6 +6,8 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Login from "./components/LoginContainer/Login.js";
 import SignUp from "./components/SignUpContainer/SignUp.js";
 import WelcomeScreen from "./components/WelcomeContainer/WelcomeScreen.js";
+import ForgotPassword from "./components/ForgotPasswordContainer/ForgotPassword.js";
+import EmailSent from "./components/EmailSentContainer/EmailSent.js";
 
 function App() {
   return (<Router>
@@ -29,9 +31,11 @@ function App() {
       <div className="auth-wrapper">
         <div className="auth-inner">
           <Switch>
-            <Route exact path='/' component={Login} />
+            <Route exact path='/' component={WelcomeScreen} />
             <Route path="/sign-in" component={Login} />
             <Route path="/sign-up" component={SignUp} />
+            <Route path="/Forgot-password" component={ForgotPassword} />
+            <Route path="/Email-Sent" component={EmailSent} />
           </Switch>
         </div>
       </div>
